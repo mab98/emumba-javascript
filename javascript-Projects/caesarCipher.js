@@ -1,5 +1,6 @@
 function rot13 (str) {
   const alphabets = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+  let middle = alphabets.length / 2
   let str2 = ''
   for (let i = 0; i < str.length; i++) {
     const element = str[i]
@@ -8,11 +9,11 @@ function rot13 (str) {
     if (index === -1) {
       str2 += element
     } else {
-      if (index < 13) {
-        index2 = index + 13
+      if (index < middle) {
+        index2 = index + middle
         str2 += alphabets[index2]
       } else {
-        index2 = index % 13
+        index2 = index % middle
         str2 += alphabets[index2]
       }
     }
