@@ -11,7 +11,7 @@ let denom = [
 ]
 
 function checkCashRegister (price, cash, cid) {
-  let output = { status: null, change: [] }
+  const output = { status: null, change: [] }
   let change = cash - price
 
   // let worth = cid.reduce((sum, element) => (sum += element[1]), 0)
